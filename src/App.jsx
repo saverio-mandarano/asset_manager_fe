@@ -1,13 +1,21 @@
-import { Route, Routes } from "react-router-dom";
+//import componenti gestione rotte
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//import layout
 import DefaultLayout from "./layouts/DefaultLayouts";
+
+//import pages
+import HomePage from "./pages/HomePage";
+import AssetDetailsPage from "./pages/AssetDetailsPage";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<DefaultLayout />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/assets/:id" element={<AssetDetailsPage />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 }
 

@@ -17,7 +17,9 @@ export default function DefaultLayout() {
   }, []);
   return (
     <div className="container mt-5">
-      <button className="btn btn-primary">Bootstrap funziona</button>
+      <button className="btn btn-primary">
+        Bootstrap funziona "siamo in DefaultLayout"
+      </button>
     </div>
   );
 }
