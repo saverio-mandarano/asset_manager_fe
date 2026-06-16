@@ -12,7 +12,7 @@ export default function AssetCard({ assetProp }) {
       <div className="card h-100">
         <h6 className="text-muted ">{ticker}</h6>
         <div className="card-img-wrapper">
-          <img src={imageUrl} className="card-img-top" alt={name} />
+          <img src={`${imageUrl}.jpg`} className="card-img-top" alt={name} />
         </div>
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
