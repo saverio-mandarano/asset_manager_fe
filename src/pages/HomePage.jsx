@@ -14,7 +14,7 @@ export default function HomePage() {
         console.log("data", res.data);
       })
       .catch((err) => {
-        console.log("errore home page api call: ", err.message);
+        console.log("error fetch assets: ", err.message);
       });
   }, []);
 

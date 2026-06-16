@@ -32,3 +32,7 @@ body {
 .card .card-img-wrapper {
   height: 12rem;
 }
+
+#asset-details .card-img-wrapper {
+  height: 19rem;
+}
