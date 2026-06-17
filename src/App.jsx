@@ -7,7 +7,7 @@ import DefaultLayout from "./layouts/DefaultLayouts";
 //import pages
 import HomePage from "./pages/HomePage";
 import AssetDetailsPage from "./pages/AssetDetailsPage";
-import NotFoundPage from "./pages/NotFondPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
