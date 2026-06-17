@@ -19,7 +19,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="container my-5">
+    <>
       <div className="row g-4">
         {assets.map((asset) => (
           <div key={asset.id} className=" col-12 col-md-6 col-lg-4">
@@ -27,6 +27,6 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }

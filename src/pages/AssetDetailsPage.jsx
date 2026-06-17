@@ -37,7 +37,7 @@ export default function AssetDetailsPage() {
   if (notFound) return <NotFoundAsset />;
 
   return (
-    <div className="container">
+    <>
       <section id="asset-details" className="card my-4">
         <AssetDetailsPageCard assetProp={asset} />
       </section>
@@ -53,6 +53,6 @@ export default function AssetDetailsPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

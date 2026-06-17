@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //import layout
-import DefaultLayout from "./layouts/DefaultLayouts";
+import DefaultLayout from "./layouts/DefaultLayout";
 
 //import pages
 import HomePage from "./pages/HomePage";
@@ -13,9 +13,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/assets/:id" element={<AssetDetailsPage />} />
-        <Route path="*" Component={NotFoundPage} />
+        <Route Component={DefaultLayout}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/assets/:id" element={<AssetDetailsPage />} />
+          <Route path="*" Component={NotFoundPage} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
