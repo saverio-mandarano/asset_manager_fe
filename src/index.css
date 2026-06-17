@@ -36,3 +36,8 @@ body {
 #asset-details .card-img-wrapper {
   height: 19rem;
 }
+
+/* footer */
+.sm-text-custom {
+  font-size: 0.8rem;
+}
