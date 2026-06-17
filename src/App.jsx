@@ -7,6 +7,7 @@ import DefaultLayout from "./layouts/DefaultLayouts";
 //import pages
 import HomePage from "./pages/HomePage";
 import AssetDetailsPage from "./pages/AssetDetailsPage";
+import NotFoundPage from "./pages/NotFondPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/assets/:id" element={<AssetDetailsPage />} />
+        <Route path="*" Component={NotFoundPage} />
       </Routes>
     </BrowserRouter>
   );
