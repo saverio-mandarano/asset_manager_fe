@@ -9,6 +9,7 @@ export default function HomePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedQuery(query);
+    setQuery("");
   };
 
   const [assets, setAssets] = useState([]);
@@ -49,11 +50,19 @@ export default function HomePage() {
       </div>
 
       <div className="row g-4">
-        {assets.map((asset) => (
-          <div key={asset.id} className=" col-12 col-md-6 col-lg-4">
-            <AssetCard assetProp={asset} />
+        {assets.length > 0 ? (
+          assets.map((asset) => (
+            <div key={asset.id} className=" col-12 col-md-6 col-lg-4">
+              <AssetCard assetProp={asset} />
+            </div>
+          ))
+        ) : (
+          <div className="col-12 text-center">
+            <div className="alert alert-warning">
+              No assets found for this search.
+            </div>
           </div>
-        ))}
+        )}
       </div>
     </>
   );
