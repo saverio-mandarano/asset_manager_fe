@@ -8,7 +8,7 @@ export default function AssetCard({ assetProp }) {
   const { id, description, imageUrl, name, ticker } = assetProp;
 
   return (
-    <Link to={`assets/${id}`}>
+    <Link to={`${id}`}>
       <div className="card h-100">
         <h6 className="text-muted ">{ticker}</h6>
         <div className="card-img-wrapper">

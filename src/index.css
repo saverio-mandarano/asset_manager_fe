@@ -41,3 +41,24 @@ body {
 .sm-text-custom {
   font-size: 0.8rem;
 }
+
+/* navbar */
+
+.my-nav {
+  position: relative;
+}
+
+/* .my-nav:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(42, 253, 0);
+  transition: all 0.2ss ease;
+  left: 0;
+  bottom: 0;
+} */
+
+.nav-link.active {
+  border-bottom: 2px solid rgb(42, 253, 0);
+}

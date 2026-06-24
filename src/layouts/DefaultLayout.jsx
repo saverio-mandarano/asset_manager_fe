@@ -7,10 +7,12 @@ import Footer from "../components/Footer";
 
 export default function DefaultLayout() {
   return (
-    <div className="container my-5 d-flex flex-column">
+    <>
       <Header />
-      <Outlet />
+      <div className="container my-5 d-flex flex-column">
+        <Outlet />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
