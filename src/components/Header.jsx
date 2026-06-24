@@ -6,12 +6,12 @@ const Header = () => {
   const [activeAssets, setActiveAssets] = useState(false);
 
   return (
-    <header className="mb-5 mt-2 mx-4">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <header className="mb-5 mt-2 ">
+      <nav className="navbar navbar-expand-lg bg-white">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <span className="navbar-brand me-5 ps-3" href="#">
             Assets_Manager
-          </a>
+          </span>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,8 +24,8 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item my-nav">
+            <ul className="navbar-nav me-auto mb-2 me-2 mb-lg-0">
+              <li className="nav-item my-nav  me-2">
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
@@ -46,14 +46,14 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            <form className="d-flex pe-4" role="search">
               <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-primary" type="submit">
                 Search
               </button>
             </form>
