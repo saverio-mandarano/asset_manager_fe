@@ -29,7 +29,7 @@ export default function AssetDetailsPageCard({ assetProp }) {
             <li className="list-group-item d-flex justify-content-between align-items-center">
               <span className="text-muted">Category:</span>
               <span className="fw-semibold text-uppercase">
-                {category.name}
+                {category?.name ?? "-"}
               </span>
             </li>
 

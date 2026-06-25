@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 export default function HomePage() {
   const [query, setQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +34,19 @@ export default function HomePage() {
     <>
       {/* searchbar */}
       <div className="row mb-4">
+        <div className="col-12 col-md-6 col-lg-4">
+          <select
+            className="form-select mb-3 "
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+          >
+            <option value="" disabled>
+              Select by
+            </option>
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>
+          </select>
+        </div>
         <div className="col-12 col-md-6 col-lg-4 ms-auto">
           <form className="d-flex" onSubmit={handleSubmit} role="search">
             <input
