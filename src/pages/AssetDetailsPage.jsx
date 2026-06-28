@@ -42,6 +42,28 @@ export default function AssetDetailsPage() {
         <AssetDetailsPageCard assetProp={asset} />
       </section>
 
+      <section id="asset-category" className="card my-4">
+        <div className="card-body">
+          <h6 className="fw-bold mb-3">Category</h6>
+          <hr></hr>
+          {asset.category ? (
+            <>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <span className="fw-semibold">
+                  {asset.category.name.toUpperCase()} -
+                </span>
+                <span className="badge bg-secondary">
+                  Levl Risk: {asset.category.riskLevel}
+                </span>
+              </div>
+              <p className="text-muted mb-0">{asset.category.description}</p>
+            </>
+          ) : (
+            <p className="text-muted mb-0">No Category .</p>
+          )}
+        </div>
+      </section>
+
       <section id="asset-linked-tags" className="card my-4">
         <div className="card-body">
           <h6 className="fw-bold mb-3">Linked Tags</h6>
