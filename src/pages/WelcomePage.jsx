@@ -1,7 +1,7 @@
 export default function WelcomePage() {
   return (
-    <div class="container my-5 d-flex flex-column flex-grow-1 bg-white">
-      <section class="d-flex align-items-center justify-content-center flex-grow-1 py-5">
+    <div className="container my-5 d-flex flex-column flex-grow-1 bg-white">
+      <section className="d-flex align-items-center justify-content-center flex-grow-1 py-5">
         <div className="text-center col-12 col-md-8 col-lg-6">
           <h1 className="display-4 fw-bold mb-3">Welcome</h1>
 
