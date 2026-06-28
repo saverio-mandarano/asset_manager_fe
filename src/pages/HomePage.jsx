@@ -30,9 +30,15 @@ export default function HomePage() {
       });
   }, [submittedQuery]);
 
+  const sortedAssets = [...assets].sort((a, b) => {
+    //creo copia di assets per non modificare l'originale usando il sort
+    if (sortOrder === "asc") return a.name.localeCompare(b.name);
+    if (sortOrder === "desc") return b.name.localeCompare(a.name);
+    return 0; // sorteOrder parte vuoto, dunque gestisco la casistica, nessun sort avviene
+  });
+
   return (
     <>
-      {/* searchbar */}
       <div className="row mb-4">
         <div className="col-12 col-md-6 col-lg-4">
           <select
@@ -64,8 +70,8 @@ export default function HomePage() {
       </div>
 
       <div className="row g-4">
-        {assets.length > 0 ? (
-          assets.map((asset) => (
+        {sortedAssets.length > 0 ? (
+          sortedAssets.map((asset) => (
             <div key={asset.id} className=" col-12 col-md-6 col-lg-4">
               <AssetCard assetProp={asset} />
             </div>
